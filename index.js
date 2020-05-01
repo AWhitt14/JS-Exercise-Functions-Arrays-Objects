@@ -54,12 +54,12 @@ console.log(sayGoodbye('Alex'));
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(C) {
- let F = Math.round(C * 1.8 + 32);
- return `${F} degrees Fahrenheit.`;
+function temperatureCtoF(X) {
+ let temp = Math.round(X * 1.8 + 32);
+ return temp;
 }
 
-console.log(temperatureCtoF(24));
+console.log(temperatureCtoF(40));
 /**
  * ### Challenge `temperatureInF`
  * 
@@ -77,12 +77,18 @@ console.log(temperatureCtoF(24));
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(F,C) {
-  temperatureCtoF(C);
-  return `${F} degrees Farenheit ina slightly more complicated way.`;
+function temperatureInF(temp2,unit) {
+ 
+  if (unit === 'C'){
+  let t = temperatureCtoF(temp2);
+    return t;}
+    else if( unit === 'F') {
+      return `${temp2}F`
+    }
+
 }
 
-console.log('come back to me later');
+console.log(temperatureInF(25,'C'));
 
 
 
@@ -177,11 +183,13 @@ console.log(appleIndex(['orange', 'grape', 'apple', 'banana', 'mango']));
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(y) {
-  let fruits2 = y;
-  for (let i = 0; i < y.length; i++){
-    let m = y
-    if (i = 'apples')
-  }
+  let test = y.indexOf("apple")
+ for (let I = 0; I < y.length; I++){
+   if (y === "apple") {
+     return true;
+   }
+   else { return false;}
+ }
 }
 
 console.log(isItAnApple(['orange', 'apple', 'banana', 'apples', 'apple', 'mango']));
