@@ -80,17 +80,13 @@ console.log(temperatureCtoF(40));
 function temperatureInF(temp2,unit) {
  
   if (unit === 'C'){
-  let t = temperatureCtoF(temp2);
-    return t;}
+    return `${temperatureCtoF(temp2)}F`;
+  }
     else if( unit === 'F') {
       return `${temp2}F`
     }
 
 }
-
-console.log(temperatureInF(25,'C'));
-
-
 
 /**
  * ### Challenge `makePersonObject`
@@ -118,8 +114,6 @@ function makePersonObject(id, name, email) {
   return person;
 }
 
-console.log(makePersonObject(4,'Alex', 'Alex@Awesome.com'));
-
 /**
  * ### Challenge `getName`
  * 
@@ -133,16 +127,12 @@ console.log(makePersonObject(4,'Alex', 'Alex@Awesome.com'));
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(id, name, email) {
-  let person2 = {
-    id: id,
-    name: name,
-    email: email,
-  }  
-  return `Hello, my name is ${name}`;
-}
 
-console.log(getName(5, 'Alex', 'alex@awesome.com'));
+function getName(x) {
+let p2 = x;
+
+return `hello, my name is ${p2.name}`;
+}
 
 /**
  * ### Challenge `appleIndex`
@@ -165,8 +155,6 @@ function appleIndex(x) {
   return a;
 }
 
-console.log(appleIndex(['orange', 'grape', 'apple', 'banana', 'mango']));
-
 /**
  * ### Challenge `isItAnApple`
  * 
@@ -183,16 +171,13 @@ console.log(appleIndex(['orange', 'grape', 'apple', 'banana', 'mango']));
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(y) {
-  let test = y.indexOf("apple")
- for (let I = 0; I < y.length; I++){
-   if (y === "apple") {
-     return true;
-   }
-   else { return false;}
- }
+  let istrue = [];
+  for (let i = 0; i < y.length; i++){
+    if (y[i] === 'apples') { istrue.push(true)}
+    else {istrue.push(false)}
+    return istrue;
+  }
 }
-
-console.log(isItAnApple(['orange', 'apple', 'banana', 'apples', 'apple', 'mango']));
 
 /*
 // ⭐️ Example Test Data ⭐️
@@ -229,6 +214,7 @@ function get3rdCar(inventory) {
   return `The is a ${the3rd.car_make} ${the3rd.car_model}`
 }
 
+
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -247,8 +233,13 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const car_inv = inventory[index];
+  
+
+  return `this is a ${car_inv.car_make} ${car_inv.car_model}`
+let car_type;
 }
+
 
 /**
  * ### Challenge `getLastCarInfo`
